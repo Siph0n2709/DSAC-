@@ -139,6 +139,72 @@ build STLDLL.exe: CXX_EXECUTABLE_LINKER__STLDLL_Debug CMakeFiles/STLDLL.dir/STL_
   TARGET_IMPLIB = libSTLDLL.dll.a
   TARGET_PDB = STLDLL.exe.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target SSTL
+
+
+#############################################
+# Order-only phony target for SSTL
+
+build cmake_object_order_depends_target_SSTL: phony || .
+
+build CMakeFiles/SSTL.dir/StackSTL.cpp.obj: CXX_COMPILER__SSTL_unscanned_Debug C$:/Users/Agnivesh$ Kaundinya/Documents/C++/StackSTL.cpp || cmake_object_order_depends_target_SSTL
+  DEP_FILE = CMakeFiles\SSTL.dir\StackSTL.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\SSTL.dir
+  OBJECT_FILE_DIR = CMakeFiles\SSTL.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target SSTL
+
+
+#############################################
+# Link the executable SSTL.exe
+
+build SSTL.exe: CXX_EXECUTABLE_LINKER__SSTL_Debug CMakeFiles/SSTL.dir/StackSTL.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\SSTL.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = SSTL.exe
+  TARGET_IMPLIB = libSSTL.dll.a
+  TARGET_PDB = SSTL.exe.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target BST
+
+
+#############################################
+# Order-only phony target for BST
+
+build cmake_object_order_depends_target_BST: phony || .
+
+build CMakeFiles/BST.dir/Binary_Search_Tree/BinarySearchTree.cpp.obj: CXX_COMPILER__BST_unscanned_Debug C$:/Users/Agnivesh$ Kaundinya/Documents/C++/Binary$ Search$ Tree/BinarySearchTree.cpp || cmake_object_order_depends_target_BST
+  DEP_FILE = CMakeFiles\BST.dir\Binary_Search_Tree\BinarySearchTree.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\BST.dir
+  OBJECT_FILE_DIR = CMakeFiles\BST.dir\Binary_Search_Tree
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target BST
+
+
+#############################################
+# Link the executable BST.exe
+
+build BST.exe: CXX_EXECUTABLE_LINKER__BST_Debug CMakeFiles/BST.dir/Binary_Search_Tree/BinarySearchTree.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\BST.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = BST.exe
+  TARGET_IMPLIB = libBST.dll.a
+  TARGET_PDB = BST.exe.dbg
+
 
 #############################################
 # Utility command for edit_cache
@@ -165,9 +231,13 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
+build BST: phony BST.exe
+
 build C__: phony C__.exe
 
 build MDLL: phony MDLL.exe
+
+build SSTL: phony SSTL.exe
 
 build STLDLL: phony STLDLL.exe
 
@@ -186,7 +256,7 @@ build codegen: phony
 #############################################
 # Folder: C:/Users/Agnivesh Kaundinya/Documents/C++/cmake-build-debug
 
-build all: phony C__.exe MDLL.exe STLDLL.exe
+build all: phony C__.exe MDLL.exe STLDLL.exe SSTL.exe BST.exe
 
 # =============================================================================
 # Built-in targets
